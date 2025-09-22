@@ -1,26 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//clearimport './Navbar.css'; // Assuming you have a CSS file for styling
 
-const Navbar = () => {
-  return (
-    <nav>
-      <ul className="flex items-center justify-start gap-x-4 p-4 bg-blue-600 text-white">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/alumni">Alumni</Link>
-        </li>
-        <li>
-          <Link to="/students">Students</Link>
-        </li>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav className="bg-blue-600">
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="flex justify-between items-center h-16">
+        <div className="flex-shrink-0">
+          <span className="text-white text-xl font-bold">Alumni Portal</span>
+        </div>
+        <ul className="flex space-x-6">
+          <li>
+            <Link to="/" className="text-white hover:text-gray-200 font-medium transition">Home</Link>
+          </li>
+          <li>
+            <Link to="/college" className="text-white hover:text-gray-200 font-medium transition">College</Link>
+          </li>
+          <li>
+            <Link to="/students" className="text-white hover:text-gray-200 font-medium transition">Students</Link>
+          </li>
+          <li>
+            <Link to="/dashboard" className="text-white hover:text-gray-200 font-medium transition">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/user" className="text-white hover:text-gray-200 font-medium transition">User</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+);
 
 export default Navbar;
