@@ -39,15 +39,6 @@ const Navbar = () => (
           </li>
           <li>
             <NavLink
-              to="/dashboard"
-              className="text-white hover:text-gray-200 font-medium transition"
-              activeClassName="text-yellow-300"
-            >
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/user"
               className="text-white hover:text-gray-200 font-medium transition"
               activeClassName="text-yellow-300"

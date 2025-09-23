@@ -1,17 +1,13 @@
 import React from 'react';
-
+import Footer from '../components/footer';
 const Home = () => {
     return (
-        <div className="home">
-            <h1>ALUMNI-PORTAL</h1>
-            <p>Welcome to the Centralized Alumni & Student Data Maintenance System.
-                This platform allows you to manage and maintain data for both alumni and students efficiently.</p>
-            <div className="navigation-options">
-                <ul>
-                </ul>
+       <div className="min-h-screen flex flex-col bg-cover bg-center relative" style={{ backgroundImage: "url('C:/Users/kashy/OneDrive/Desktop/nikhil/Alumni-portal/public/Image/1758616677245.jpg')" }}>
+            <div className="w-full flex justify-center items-center pt-8 absolute top-0 left-0 z-20">
+                <h1 className="text-5xl font-bold text-black drop-shadow-lg mb-4 text-center bg-white bg-opacity-80 px-8 py-2 rounded">ALUMNI-PORTAL</h1>
             </div>
+            <Footer />
         </div>
-    );
-};
-
+        )
+    };
 export default Home;
