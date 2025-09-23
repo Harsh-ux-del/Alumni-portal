@@ -1,20 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../pages/Home';
-import Alumni from '../pages/Alumni';
-import Students from '../pages/Students';
-import NotFound from '../pages/NotFound';
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import Login from "../components/Login";
+import Dashboard from "../components/Dashboard";
+ import StudentsAuth from "../pages/StudentsAuth";
+import CollegeAuth from "../pages/CollegeAuth";
 
 const AppRoutes = () => {
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/alumni" component={Alumni} />
-                <Route path="/students" component={Students} />
-                <Route component={NotFound} />
-            </Switch>
-        </Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            {<Route path="/students" element={<StudentsAuth />} /> }
+            {<Route path="/college" element={<CollegeAuth />} /> }
+        </Routes>
     );
 };
 

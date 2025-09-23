@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => (
   <nav className="bg-blue-600">
@@ -10,19 +10,50 @@ const Navbar = () => (
         </div>
         <ul className="flex space-x-6">
           <li>
-            <Link to="/" className="text-white hover:text-gray-200 font-medium transition">Home</Link>
+            <NavLink
+              exact
+              to="/"
+              className="text-white hover:text-gray-200 font-medium transition"
+              activeClassName="text-yellow-300"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/college" className="text-white hover:text-gray-200 font-medium transition">College</Link>
+            <NavLink
+              to="/college"
+              className="text-white hover:text-gray-200 font-medium transition"
+              activeClassName="text-yellow-300"
+            >
+              College
+            </NavLink>
           </li>
           <li>
-            <Link to="/students" className="text-white hover:text-gray-200 font-medium transition">Students</Link>
+            <NavLink
+              to="/students"
+              className="text-white hover:text-gray-200 font-medium transition"
+              activeClassName="text-yellow-300"
+            >
+              Students
+            </NavLink>
           </li>
           <li>
-            <Link to="/dashboard" className="text-white hover:text-gray-200 font-medium transition">Dashboard</Link>
+            <NavLink
+              to="/dashboard"
+              className="text-white hover:text-gray-200 font-medium transition"
+              activeClassName="text-yellow-300"
+            >
+              Dashboard
+            </NavLink>
           </li>
           <li>
-            <Link to="/user" className="text-white hover:text-gray-200 font-medium transition">User</Link>
+            <NavLink
+              to="/user"
+              className="text-white hover:text-gray-200 font-medium transition"
+              activeClassName="text-yellow-300"
+            >
+              User
+            </NavLink>
           </li>
         </ul>
       </div>
